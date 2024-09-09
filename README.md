@@ -8,7 +8,6 @@ This portfolio website showcases my professional skills, projects, and achieveme
 
 ## Features
 
-- **Responsive Design:** Adapts to various screen sizes and devices.
 - **Project Showcase:** Highlights my key projects and technical skills.
 - **Contact Information:** Provides a contact form and additional ways to reach out.
 

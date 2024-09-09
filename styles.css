@@ -1,0 +1,268 @@
+/* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif; /* Updated font for a more modern look */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 60px; /* Space for footer */
+}
+
+main {
+    flex: 1;
+    margin-top: 20px;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+/* Navigation Bar */
+nav {
+    background: #002F6C; /* Navy Blue background */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px; /* Adjusted for a more spacious nav bar */
+    z-index: 2; /* Ensure navigation is above other content */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; /* Distribute space between items */
+    align-items: center; /* Align items vertically center */
+    max-width: 1200px; /* Center the container */
+    margin: 0 auto; /* Center the container */
+    height: 100%; /* Ensure full height of nav bar */
+    padding: 0 20px; /* Space on the left and right sides */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Increased space between menu items */
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px; /* Adjusted padding for better fit */
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase; /* Capitalize menu items */
+    font-weight: 500; /* Semi-bold for better emphasis */
+    font-size: 16px; /* Adjust font size for better fit */
+    border-radius: 4px; /* Rounded corners for the links */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions for hover effect */
+}
+
+nav ul li a:hover {
+    background: #0056b3; /* Darker blue for hover */
+    color: #fff; /* Maintain white text on hover */
+}
+
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Pushes the search bar to the far right */
+}
+
+.search-bar input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px; /* Adjust width as needed */
+    margin-left: 10px; /* Space between menu and search bar */
+}
+
+/* Ensure Sections are not hidden under the navigation bar */
+section {
+    padding: 20px; /* Adjust padding as needed */
+    margin: 20px auto; /* Adjust margin as needed */
+    max-width: 800px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1; /* Ensure sections are above the footer */
+    padding-top: 80px; /* Space for fixed navigation bar */
+}
+
+section:first-of-type {
+    margin-top: 50px; /* Adjust this value based on the height of your navigation bar */
+}
+
+section h2 {
+    margin-top: 0;
+    color: #002F6C; /* Navy Blue for section headers */
+    font-size: 28px; /* Larger font size for emphasis */
+    border-bottom: 2px solid #0056b3; /* Underline effect for headers */
+    padding-bottom: 10px;
+}
+
+div {
+    margin-top: 50px; /* Adjust based on the height of your header */
+    text-align: center; /* Center align text */
+}
+
+h1 {
+    margin: 5px; /* Remove default margin */
+    padding: 20px; /* Add padding around the text */
+    font-size: 30px; /* Larger font size for emphasis */
+    color: #002F6C; /* Navy Blue for main title */
+}
+
+p {
+    font-size: 16px; /* Adjust for readability */
+    color: #333; /* Dark Gray for text */
+}
+
+/* Add a buffer space for anchor links */
+section::before {
+    content: "";
+    display: block;
+    height: 80px; /* Space for fixed navigation bar */
+    margin-top: -80px; /* Negative margin to pull content up */
+    visibility: hidden; /* Hide the buffer but keep the space */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 10px; /* Adjusted to pixels */
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3; /* Darker shade on hover */
+    text-decoration: underline;
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin-top: 10px; /* Adjusted to pixels */
+    font-size: 16px; /* Slightly larger font size for labels */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px; /* Adjusted to pixels */
+    margin-top: 5px; /* Adjusted to pixels */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px; /* Adjusted to pixels */
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px; /* Match label font size */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+form button:hover {
+    background: #0056b3; /* Darker shade for hover effect */
+}
+
+/* Profile Picture Styles */
+.profile-picture {
+    display: block;
+    max-width: 230px; /* Adjust size for better fit */
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    margin: 20px auto; /* Center align and space around */
+    border: 5px solid #ddd; /* Optional border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling effect */
+}
+
+.profile-picture:hover {
+    transform: scale(1.1); /* Scale the image up to 110% */
+}
+
+/* Button Styling */
+button {
+    background-color: #007bff; /* Primary blue color */
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Adjust size for the button */
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    margin: 20px; /* Add some margin around the button */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05); /* Slightly scale up the button */
+}
+
+/* Welcome Container Styling */
+.welcome-container {
+    text-align: center; /* Center align text */
+    font-weight: bold;
+    padding: 50px; /* Add padding around the content */
+    margin-top: auto; /* Add margin around the div container to the top */
+    background: #ffffff; /* White background for contrast */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.welcome-container h1 {
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 20px
+}
+
+/* Footer Styles */
+footer {
+    background: #002F6C; /* Navy Blue background for contrast */
+    color: #fff; /* White text color for readability */
+    text-align: center;
+    padding: 20px 0; /* Adequate padding */
+    width: 100%;
+    position: relative; /* Ensure it follows the content flow */
+    bottom: 0;
+    font-size: 16px; /* Ensure readability */
+    border-top: 1px solid #0056b3; /* Subtle border for separation */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+}
+
+footer p {
+    margin: 0;
+    color: #fff; /* Ensure the text is white */
+}
+
+footer a {
+    color: #dbe0e5; /* Light gray color for links */
+    text-decoration: none;
+    font-weight: bold; /* Emphasize links */
+}
+
+footer a:hover {
+    color: #fff; /* Example hover color */
+}

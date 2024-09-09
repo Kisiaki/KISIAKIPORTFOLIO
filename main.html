@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Kisiaki Juma">
+    <meta name="description" content="Kisiaki's Portfolio">
+    <title>Kisiaki's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <!-- Navigation Menu -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#interests">Interests</a></li>
+                    <li><a href="#programming-languages">Languages</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Connect</a></li>
+                </ul>      
+                    
+                    <!-- Search Bar -->
+                <div class="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+        </nav>
+    
+
+    </header>
+    <main>
+        
+       
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a passionate developer with a drive for creating innovative solutions. My journey in technology
+                started
+                with a fascination for coding and problem-solving, and I continue to be motivated by the challenge of
+                turning ideas into functional and impactful software.</p>
+        </section>
+
+        <section id="education">
+            <h2>Educational Background</h2>
+            <p>Download my <a href="Kisiakitemp.pdf" download target="_blank">CV</a></p>
+        </section>
+
+        <section id="interests">
+            <h2>Interests</h2>
+            <p>I am excited by the ever-evolving world of technology and enjoy working on projects involving AI, web
+                development, and software engineering. My interests also include contributing to open-source projects
+                and
+                exploring new tech trends.</p>
+        </section>
+
+        <section id="programming-languages">
+            <h2>Programming Languages & Frameworks</h2>
+            <ul>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>React</li>
+                <li>Django</li>
+                <!-- Add more as needed -->
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="https://github.com/yourusername/project1" target="_blank">Project 1</a></li>
+                <li><a href="https://github.com/yourusername/project2" target="_blank">Project 2</a></li>
+                <li><a href="https://github.com/yourusername/project3" target="_blank">Project 3</a></li>
+                <!-- Add more as needed -->
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Let's connect</h2>
+            <form action="mailto:your.email@example.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" required></textarea><br><br>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+
+    </main>
+    <footer>
+        <p>© <span id="year"></span> Kisiaki's Portfolio. All rights reserved.</p>        
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

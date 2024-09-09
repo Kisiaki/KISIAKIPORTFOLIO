@@ -90,6 +90,7 @@ nav ul li a:hover {
 
 /* Ensure Sections are not hidden under the navigation bar */
 section {
+    text-align: justify;
     padding: 20px; /* Adjust padding as needed */
     margin: 20px auto; /* Adjust margin as needed */
     max-width: 800px;
@@ -266,3 +267,75 @@ footer a {
 footer a:hover {
     color: #fff; /* Example hover color */
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav {
+        height: auto; /* Allow height to adjust based on content */
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .nav-container {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .nav-container ul {
+        display: flex; /* Show the menu items */
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width for the menu */
+        background: #002F6C; /* Background color for the menu */
+        padding: 0; /* Remove padding */
+        margin: 0; /* Remove margin */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for menu */
+        z-index: 1; /* Ensure menu is above other content */
+    }
+
+    .nav-container ul li {
+        width: 100%; /* Full width for menu items */
+    }
+
+    .nav-container ul li a {
+        padding: 15px; /* Adjust padding for menu items */
+        display: block; /* Ensure the link takes full width */
+        color: #fff; /* Text color */
+        text-align: center; /* Center align text */
+        text-decoration: none; /* Remove underline */
+        border-bottom: 1px solid #0056b3; /* Optional border for separation */
+    }
+
+    .nav-container ul li a:hover {
+        background: #0056b3; /* Darker blue on hover */
+    }
+
+    .search-bar {
+        margin: 10px 0; /* Adjust margin for the search bar */
+    }
+
+    .search-bar input {
+        width: 100%; /* Full width for the search bar */
+    }
+
+    /* Adjust section padding to account for the fixed navbar */
+    section {
+        padding-top: 80px; /* Ensure content is not hidden under the fixed navbar */
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-container {
+        padding: 20px; /* Less padding for very small screens */
+    }
+
+    button {
+        padding: 8px 16px; /* Adjust button size */
+        font-size: 14px; /* Smaller font size */
+    }
+
+    .profile-picture {
+        max-width: 150px; /* Smaller profile picture */
+    }
+}
+
+
+

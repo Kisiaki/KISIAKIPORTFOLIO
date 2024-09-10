@@ -10,6 +10,8 @@ This portfolio website showcases my professional skills, projects, and achieveme
 
 - **Project Showcase:** Highlights my key projects and technical skills.
 - **Contact Information:** Provides a contact form and additional ways to reach out.
+- **Responsiveness:** Ensures the layout adapts smoothly to various screen sizes, offering an optimal user experience across devices.
+
 
 ## Technologies Used
 

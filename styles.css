@@ -8,8 +8,6 @@ html, body {
 body {
     font-family: 'Roboto', sans-serif; /* Updated font for a more modern look */
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
     color: #333;
     display: flex;
@@ -29,6 +27,8 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
+    display: flex;
+    align-items: center;
     height: 60px; /* Adjusted for a more spacious nav bar */
     z-index: 2; /* Ensure navigation is above other content */
 }
@@ -42,6 +42,7 @@ nav {
     height: 100%; /* Ensure full height of nav bar */
     padding: 0 20px; /* Space on the left and right sides */
     box-sizing: border-box; /* Ensure padding does not affect width */
+    width: 100%;
 }
 
 #sidebar {
@@ -58,9 +59,6 @@ nav {
     justify-content: flex-start;
 }
 
-#sidebar li {
-    width: 100%;
-}
 
 nav ul {
     margin: 0;
@@ -99,11 +97,12 @@ nav ul li a:hover {
     width: 250px;
     z-index: 999;
     background-color: #002F6C;
-    backdrop-filter: blur(10px);
     display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    overflow-y: auto; /* Allow scrolling if content overflows */
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
 }
 
 .sidebar li {
@@ -197,7 +196,7 @@ a {
 
 a:hover {
     color: #0056b3; /* Darker shade on hover */
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 /* Form Styles */
@@ -316,11 +315,45 @@ footer a:hover {
 
     .menu-button{
         display: block;
+        /* margin-left: auto; */
+    }
+
+    
+    .nav-menu {
+        display: none;
+    }
+
+    .sidebar {
+        display: flex;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    section {
+        padding-top: 120px; /* Increase padding for mobile */
     }
 }
 
 @media(max-width: 480px){
     .sidebar{
+        display: block;
         width: 100%;
+    }
+
+    .profile-picture {
+        max-width: 150px; /* Adjust size for smaller screens */
+    }
+
+    button {
+        font-size: 16px; /* Smaller font size for buttons on smaller screens */
+        padding: 10px 20px; /* Adjust padding for smaller buttons */
     }
 }

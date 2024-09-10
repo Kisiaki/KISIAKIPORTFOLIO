@@ -7,14 +7,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //ShowSideBar function
 
-    function showSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'flex'
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.add('sidebar-visible');
     }
+    
 
     //hideSideBar function
 
-    function hideSidebar(){
-        const sidebar = document.querySelector('.sidebar')
-        sidebar.style.display = 'none'
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebar.classList.remove('sidebar-visible');
     }

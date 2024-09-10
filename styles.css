@@ -47,15 +47,18 @@ nav {
 #sidebar {
     position: fixed;
     top: 0;
-    right: 0;
+    right: -250px; /* Initially hidden of screen */
     height: 100%;
     width: 250px;
     z-index: 999;
     background-color: #002F6C;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    transition: right 0.3s ease;
+}
+
+.sidebar-visible {
+    right: 0; /* Slide the sidebar into view */
 }
 
 #sidebar li {
@@ -309,7 +312,7 @@ footer a:hover {
     color: #fff; /* Example hover color */
 }
 
-@media(max-width: 800px){
+@media(max-width: 768px){
     .hideOnMobile{
         display: none;
     }
@@ -319,7 +322,7 @@ footer a:hover {
     }
 }
 
-@media(max-width: 400px){
+@media(max-width: 480px){
     .sidebar{
         width: 100%;
     }

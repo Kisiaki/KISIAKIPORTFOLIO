@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Kisiaki Juma">
     <meta name="description" content="Kisiaki's Portfolio">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge">  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Kisiaki's Portfolio</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -16,8 +16,9 @@
         <nav>
 
             <div class="nav-container">
-                <!-- Navigation Menu -->
-                <ul>
+
+                <!-- Navigation Menu SideBar -->
+                <ul class="sidebar">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#education">Education</a></li>
@@ -25,6 +26,18 @@
                     <li><a href="#programming-languages">Languages</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Connect</a></li>
+                    <li onclick="hideSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                </ul>
+                <!-- Navigation Menu -->
+                <ul class="nav-menu">
+                    <li class="hideOnMobile"><a href="index.html">Home</a></li>
+                    <li class="hideOnMobile"><a href="#about">About</a></li>
+                    <li class="hideOnMobile"><a href="#education">Education</a></li>
+                    <li class="hideOnMobile"><a href="#interests">Interests</a></li>
+                    <li class="hideOnMobile"><a href="#programming-languages">Languages</a></li>
+                    <li class="hideOnMobile"><a href="#projects">Projects</a></li>
+                    <li class="hideOnMobile"><a href="#contact">Connect</a></li>
+                    <li class="menu-button" onclick="showSidebar()"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
                 </ul>
 
                 <!-- Search Bar -->

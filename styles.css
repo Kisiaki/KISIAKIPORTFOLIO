@@ -306,6 +306,9 @@ footer a {
 
 footer a:hover {
     color: #fff; /* Example hover color */
+    transition: background-color 0.3s, color 0.3s;
+    background-color: rgba(255, 255, 255, 0.2); /* Example background color */
+    font-weight: bold;
 }
 
 @media(max-width: 768px){
@@ -313,12 +316,7 @@ footer a:hover {
         display: none;
     }
 
-    .menu-button{
-        display: block;
-        /* margin-left: auto; */
-    }
-
-    
+       
     .nav-menu {
         display: none;
     }

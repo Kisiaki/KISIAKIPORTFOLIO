@@ -316,7 +316,12 @@ footer a:hover {
         display: none;
     }
 
-       
+    .menu-button{
+        display: block;
+        margin-left: auto;
+    }
+
+    
     .nav-menu {
         display: none;
     }

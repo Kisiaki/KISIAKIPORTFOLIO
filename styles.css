@@ -21,6 +21,11 @@ main {
     flex: 1;
     margin-top: 20px;
     padding: 20px; /* Adjust padding as needed */
+    transition: margin-right 0.3s ease; /* Smooth transition for content shift */
+}
+
+main.shifted{
+    margin-right: 250px;
 }
 
 /* Navigation Bar */
@@ -47,20 +52,22 @@ nav {
 #sidebar {
     position: fixed;
     top: 0;
-    right: -250px; /* Initially hidden of screen */
+    right: 0;
     height: 100%;
     width: 250px;
-    z-index: 999;
+    z-index: 9999; /* Ensure sidebar is above the content */
     background-color: #002F6C;
-    display: flex;
-    flex-direction: column;
-    transition: right 0.3s ease;
+    /* display: flex; */
+    /* flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start; */
+    transform: translateX(100%); /* Start off-screen */
+    transition: transform 0.3s ease; /* Smooth transition */
 }
 
-.sidebar-visible {
-    right: 0; /* Slide the sidebar into view */
+.sidebar.active {
+    transform: translateX(0); /* Slide into view */
 }
-
 #sidebar li {
     width: 100%;
 }
